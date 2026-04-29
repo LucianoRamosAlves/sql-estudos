@@ -22,6 +22,9 @@ values (2, 'carne');
 insert into pedido (usuario_id, produto )
 values (3, 'batata');
 
+insert into pedido ( produto )
+values ('peixe');
+
 select nome, produto -- seleciono as colunas que pretendo ver
 from usuarios u-- tabela principal, esse u é um apelido para simplificar
 inner join pedido p-- escolho a tabela que vai juntar
