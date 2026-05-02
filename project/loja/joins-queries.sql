@@ -5,3 +5,5 @@ SELECT nome AS nome,
 FROM clientes c
 LEFT JOIN itens_pedido p
 ON c.clientes_id = p.produtos_id
+
+# BUG AQUI -- FALTA TERMINAR A QUERY 
