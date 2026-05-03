@@ -1,5 +1,8 @@
-select
-nome,
-left(nome, 2) as primeiro_letras,
-right(nome, 1) as ultima_letra
-from pessoas
+select continente_nome,
+    left(continente_nome, 3) as primeiras_sigla
+from continentes;
+
+
+select continente_nome,
+    right(continente_nome, 3) as ultimas_sigla
+from continentes;
