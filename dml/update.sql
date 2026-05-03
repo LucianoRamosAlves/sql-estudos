@@ -1,3 +1,6 @@
+
+USE cadastro;
+
 -- aqui tenho que tomar cuidado para não mudar toda a tabela
 
 update pessoas 
