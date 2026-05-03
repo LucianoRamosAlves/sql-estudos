@@ -32,6 +32,10 @@ select
     subdate(now(), 7) as menos_7_dias,                      -- Alias do DATE_SUB
     date_add(now(), interval '1-2' year_month) as mais_1a2m; -- Adiciona 1 ano e 2 meses
 
+-- posso adicionar horas, minutos e segundos também
+SELECT DATE_ADD(NOW(), INTERVAL 1 HOUR);
+
+
 -- 4. DIFERENÇAS ENTRE DATAS
 select
     datediff(now(), '2000-10-05') as dias_diferenca,        -- Diferença em DIAS apenas
@@ -45,7 +49,21 @@ select
     date_format(now(), '%d/%m/%Y') as data_br,              -- Formato brasileiro
     date_format(now(), '%d de %M de %Y') as data_extenso,   -- Data extensa
     date_format(now(), '%H:%i:%s') as hora_formatada,       -- Hora formatada
-    date_format(now(), '%W, %d de %M de %Y') as data_completa; -- Dia da semana + data
+    date_format(now(), '%W, %d de %M de %Y') as data_completa, -- Dia da semana + data
+    date_format(now(), '%W, %M %d, %Y at %r') as data_completa;
+
+-- formatação com time
+select
+    time_format(curtime(), '%H hours %i minutes and %s seconds'),
+    time_format(curtime(), '%h:%i:%s %p'),
+    time_format(curtime(), '%H:%i:%s'),
+    time_format(curtime(), '%H:%i:%s %p'),
+    time_format(curtime(), '%r %p'),
+    time_format(curtime(), '%r %p'),
+    time_format(curtime(), '%T'),
+    time_format(curtime(), '%T %p');
+
+
 
 -- 6. CONVERSÕES
 select
@@ -69,5 +87,11 @@ where nascimento > '2000-01-01'
 -- 9. ORDENAÇÃO COM DATAS
 order by nascimento desc;                                 -- Mais recentes primeiro
 
+-- 10 função extract para extrair partes de datas
+select
+    extract(year from nascimento) as ano_nascimento,
+    extract(month from nascimento) as mes_nascimento,
+    extract(day from nascimento) as dia_nascimento
+from pessoas;
 
 
