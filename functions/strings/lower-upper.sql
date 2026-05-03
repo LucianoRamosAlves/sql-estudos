@@ -1,5 +1,7 @@
+USE word;
+
 select
 continente_nome as continente,
-lower(nome) as nome_minusculo,
-upper(nome) as nome_maisculo
-from pessoas
+lower(continente_nome) as nome_minusculo,
+upper(continente_nome) as nome_maisculo
+from continentes;
