@@ -1,6 +1,6 @@
 USE bank_trigger;
 
-delimiter $$
+delimiter //
 CREATE TRIGGER tr_credito_bu
     BEFORE UPDATE ON credito
     FOR EACH ROW
@@ -13,7 +13,7 @@ BEGIN
     IF (NEW.credito_score > 850) THEN
         SET NEW.credito_score = 850;
     END IF;
-END%%
+END//
 delimiter ;
 
 UPDATE credito
