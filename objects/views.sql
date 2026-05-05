@@ -33,7 +33,7 @@ SELECT nome AS cliente,
 FROM clientes
 
 
-DROP VIEW v_clientes;
+DROP VIEW v_clientes; 
 
 -- Inserindo dados na tabela de clientes
 INSERT INTO clientes (nome, email, telefone) VALUES
