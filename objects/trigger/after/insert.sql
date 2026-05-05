@@ -13,9 +13,9 @@ CREATE TABLE IF NOT EXISTS usuarios (
 CREATE TABLE IF NOT EXISTS logs_usuarios (
     id_log INT AUTO_INCREMENT PRIMARY KEY,
     mensagem VARCHAR(100),
-    data_criacao DATETIME,
-    FOREIGN KEY (id_log) REFERENCES usuarios(id)
+    data_criacao DATETIME
 );
+
 
 DELIMITER $$
 
@@ -30,10 +30,42 @@ END $$
 
 DELIMITER ;
 
+DELIMITER $$
+
+CREATE TRIGGER tr_delete_usuarios
+AFTER DELETE ON usuarios
+FOR EACH ROW -- para cada linha que for inserida
+BEGIN -- o que eu quero fazer com trigger
+    INSERT INTO logs_usuarios (mensagem, data_criacao)
+    -- old representa o que foi deletado
+    VALUES (CONCAT('usuário deletado: ', OLD.nome), NOW());
+END $$
+
+DELIMITER ;
+
+DELIMITER $$
+
+CREATE TRIGGER tr_update_usuarios
+AFTER UPDATE ON usuarios
+FOR EACH ROW -- para cada linha que for inserida
+BEGIN -- o que eu quero fazer com trigger
+    INSERT INTO logs_usuarios (mensagem, data_criacao)
+    -- new representa o que foi inserido
+    VALUES (CONCAT(
+        'Nome mudou de: ', OLD.nome, ' para: ', NEW.nome), NOW());
+END $$
+
+DELIMITER ;
+
 INSERT INTO usuarios (nome) VALUES ('João');
 INSERT INTO usuarios (nome) VALUES ('Maria');
 INSERT INTO usuarios (nome) VALUES ('Pedro');
 INSERT INTO usuarios (nome) VALUES ('Laisa');
+INSERT INTO usuarios (nome) VALUES ('Lucas');
+
+DELETE FROM usuarios WHERE id = 4;
+
+UPDATE usuarios SET nome = 'Joaquim' WHERE id = 1;
 
 
 SELECT * from usuarios;
