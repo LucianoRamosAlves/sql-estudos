@@ -21,9 +21,12 @@ select count(*) from continentes;
 
 -- dicas 
 
-/* sempre que for criar uma coisa eu confirmo com o select
+/* 
+
+sempre que for criar uma coisa eu confirmo com o select
 ++ ao deletar algo eu confirmo com o select
 ++ ao alterar algo eu confirmo com o select
 ++ ao inserir algo eu confirmo com o select
 ++ sempre verifico se estou no banco certo
+
 */
