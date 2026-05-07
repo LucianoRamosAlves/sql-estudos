@@ -2,6 +2,8 @@ USE weather;
 
 SELECT DATABASE();
 
+SHOW VARIABLES LIKE 'secure_file_priv';
+
 -- ativo o modo segurança, tenho que confirmar as mudanças
 -- para maior praticidade nos estudos, deixei o autocommit ligado
 SET AUTOCOMMIT = ON;

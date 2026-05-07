@@ -2,7 +2,7 @@ USE weather;
 
 -- agora os dados limpos vem tabela oficial
 
-DELETE FROM current_weather;
+TRUNCATE TABLE current_weather;
 
 INSERT INTO current_weather
 (station_id,

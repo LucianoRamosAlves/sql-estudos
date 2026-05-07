@@ -11,8 +11,18 @@ INTO TABLE current_weather_load
 -- as colunas separadas por vírgula
 FIELDS TERMINATED BY ','
 
+ENCLOSED BY '"'
+
+
+-- as linhas separadas por quebra de linha
+LINES TERMINATED BY '\n'
+
+
+-- ignorar a primeira linha
+IGNORE 1 ROWS
+
 -- ordem das colunas
-(station_id,
+(
 station_city,
 station_state,
 station_lat,
@@ -39,14 +49,14 @@ SHOW WARNINGS; -- isto mostra os erros
 -- baseado nas linhas carregadas, informo quais dados não foram carregados
 SELECT CONCAT(
     'Não foram carregados ',
-    station_id,
+    cwl.station_id,
     ': ',
-    station_city,
+    cwl.station_city,
     ', ',
-    station_state
+    cwl.station_state
 )
-FROM current_weather cw
-WHERE cw.station_id NOT IN (
-    SELECT cwl.station_id
-    FROM current_weather_load cwl
+FROM current_weather_load cwl
+WHERE cwl.station_id NOT IN (
+    SELECT cw.station_id
+    FROM current_weather cw
 );
