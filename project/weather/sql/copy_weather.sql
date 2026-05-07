@@ -44,3 +44,6 @@ sunset
 FROM current_weather_load;
 
 -- pego os dados esta na parte FROM, pego os dados dessa tabela, SELECT seleciono quuais dados e coloco no insert, leia de baixo pra cima.
+
+
+# BUG falta finalizaar a conecção com o banco

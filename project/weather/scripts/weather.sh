@@ -2,7 +2,7 @@
 # esse arquivo é um script bash
 #!/bin/bash 
 
-cd  /home/project/weather/
+cd   /home/luciano/project/weather/
 
 # esse if verifica se o arquivo weather.csv existe
 if [ ! -f weather.csv ]; then
@@ -14,7 +14,7 @@ mysql --local_infile=1 \
 -h 127.0.0.1 \
 -D weather \
 -u trucking \
--pRoger\
+-pRoger \
 < sql/load_weather.sql \
 > load_weather.log
 

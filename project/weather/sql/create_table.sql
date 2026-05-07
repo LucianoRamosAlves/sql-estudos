@@ -4,6 +4,7 @@ SELECT DATABASE();
 
 SHOW VARIABLES LIKE 'secure_file_priv';
 
+
 -- ativo o modo segurança, tenho que confirmar as mudanças
 -- para maior praticidade nos estudos, deixei o autocommit ligado
 SET AUTOCOMMIT = ON;
@@ -49,5 +50,7 @@ DESC current_weather_load;
 -- crio uma tabela com o mesmo esquema
 CREATE TABLE current_weather LIKE current_weather_load;
 
+
+SELECT * FROM current_weather_load;
 
 

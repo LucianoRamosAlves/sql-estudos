@@ -1,11 +1,10 @@
 USE weather;
 
 -- sempre limpo a tabela antes de carregar novos dados
-DELETE FROM current_weather_load;
+TRUNCATE table current_weather_load;
 
 -- carrego os dados, peque essse arquivo para
-LOAD DATA INFILE '/var/lib/mysql-files/weather.csv'
--- essa tabela
+LOAD DATA LOCAL INFILE 'C:/Users/lramo/OneDrive/Documentos/Estudos/sql-estudos/project/weather/data/weather.csv'
 INTO TABLE current_weather_load
 
 -- as colunas separadas por vírgula
