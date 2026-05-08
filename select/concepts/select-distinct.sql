@@ -1,3 +1,9 @@
-select distinct altura-- remove os repitidos, tenho 3 alturas iguais
-from pessoas
+use sport;
+ -- removo linhas duplicadas
+select distinct pais 
+from player;
 
+SELECT DISTINCT
+    nome
+FROM
+    player;
