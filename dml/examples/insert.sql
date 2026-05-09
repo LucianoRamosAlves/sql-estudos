@@ -21,5 +21,9 @@ SELECT nome,
     NULL
 FROM player;
 
+-- esqueci de colocar o id 
+ALTER TABLE ficha_atleta
+ADD COLUMN id int PRIMARY KEY AUTO_INCREMENT FIRST;
+
 
 select * from ficha_atleta
