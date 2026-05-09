@@ -16,6 +16,8 @@ create table pessoas_masculino(
     sexo char(1),
     nascionalidade varchar(30),
     telefone int );
+
+
     
 select * from pessoas_masculino    
     
