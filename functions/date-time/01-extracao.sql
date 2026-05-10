@@ -1,4 +1,3 @@
-
 /* ========================================================================
    01 - EXTRAÇÃO: Extraindo partes de uma Data/Hora
    ========================================================================
@@ -51,6 +50,14 @@ SELECT
     HOUR(NOW())     AS hora,      -- 0-23
     MINUTE(NOW())   AS minuto,    -- 0-59
     SECOND(NOW())   AS segundo;   -- 0-59
+
+/*
+   Resultado (exemplo para 14:30:45):
+   
+   agora              | hora | minuto | segundo
+   -------------------+------+--------+---------
+   2024-10-05 14:30:45| 14   | 30     | 45
+*/
 
 -- ========================================================================
 -- 3. DAYOFWEEK() / DAYNAME() / MONTHNAME() - Nomes e posições
@@ -114,6 +121,12 @@ FROM pessoas;
    Carlos Souza   | 2000-10-05 | 4         | 40         | 279
    Maria Lima     | 1988-12-25 | 4         | 52         | 360
    João Santos    | 2000-10-20 | 4         | 42         | 294
+   
+   INTERPRETAÇÃO:
+   - Trimestre 2 = Abril a Junho (Ana)
+   - Trimestre 4 = Outubro a Dezembro (Carlos, Maria, João)
+   - Semana 24 = junho (Ana)
+   - Dia 166 = 15 de junho (166º dia do ano)
 */
 
 -- ========================================================================
@@ -153,5 +166,49 @@ FROM pessoas;
 */
 
 -- ========================================================================
-// ... rest of file ...
+-- 6. Extraindo HORA, MINUTO, SEGUNDO com EXTRACT
+-- ========================================================================
 
+/*
+   EXTRACT também funciona para partes de hora.
+*/
+
+SELECT
+    NOW() AS agora,
+    EXTRACT(HOUR   FROM NOW()) AS hora,
+    EXTRACT(MINUTE FROM NOW()) AS minuto,
+    EXTRACT(SECOND FROM NOW()) AS segundo;
+
+/*
+   Resultado:
+   
+   agora               | hora | minuto | segundo
+   --------------------+------+--------+---------
+   2024-10-05 14:30:45 | 14   | 30     | 45
+*/
+
+-- ========================================================================
+-- 7. RESUMO DE TODAS AS FUNÇÕES DE EXTRAÇÃO
+-- ========================================================================
+
+/*
+   Função          | O que extrai          | Exemplo (data: 2024-10-05)
+   ----------------+-----------------------+--------------------------
+   YEAR()          | Ano                   | 2024
+   MONTH()         | Mês (1-12)            | 10
+   DAY()           | Dia (1-31)            | 5
+   HOUR()          | Hora (0-23)           | 14
+   MINUTE()        | Minuto (0-59)         | 30
+   SECOND()        | Segundo (0-59)        | 45
+   DAYOFWEEK()     | Dia da semana (1-7)   | 7 (Sábado)
+   DAYNAME()       | Nome do dia           | Saturday
+   MONTHNAME()     | Nome do mês           | October
+   QUARTER()       | Trimestre (1-4)       | 4
+   WEEK()          | Semana do ano (1-53)  | 40
+   DAYOFYEAR()     | Dia do ano (1-366)    | 279
+   EXTRACT()       | Qualquer parte (padrão SQL) | depende da unidade
+*/
+
+-- ========================================================================
+-- FIM
+-- ========================================================================
