@@ -1,3 +1,4 @@
+SET @starttime = NOW(); -- inicia o cronometro
 
 -- seleciona o banco de dados que será utilizado
 USE weather;
@@ -91,6 +92,17 @@ USE weather;
  --   -------------------------------------------------------------------
     -- FINALIZAÇÃO DA CARGA
  --   -------------------------------------------------------------------
+    -- tempo total
+    SELECT CONCAT(
+        'Tempo total: ',
+        TIMESTAMPDIFF(
+        SECOND,
+        @starttime,
+        NOW()
+        ),
+        ' segundos'
+    ) AS execution_time;
+
 
     -- mensagem de sucesso
     SELECT 'CSV carregado com sucesso';
@@ -122,74 +134,139 @@ USE weather;
     -- VERIFICAÇÃO DE AVISOS / DADOS NÃO PROCESSADOS
  --   -------------------------------------------------------------------
 
-    -- mensagem indicando início da validação
-    SELECT 'Carregando avisos...';
+ --  -----------------------------------------------------------------------
+-- MENSAGEM DE INÍCIO DA VALIDAÇÃO
+-- -----------------------------------------------------------------------
 
-  --  -------------------------------------------------------------------
-    -- VALIDAÇÃO DE DADOS
-  --  -------------------------------------------------------------------
+-- mensagem visual exibida no terminal
+-- indicando início da etapa de validação
 
-    -- esta consulta verifica registros presentes
-    -- na tabela staging (current_weather_load)
-    -- que NÃO existem na tabela final (current_weather)
-    
-    -- isso ajuda a identificar:
-    -- dados não carregados
-    -- inconsistências
-    -- problemas de relacionamento
-    -- falhas de processamento
+SELECT 'Carregando avisos...';
 
-    SELECT CONCAT(
+-- -----------------------------------------------------------------------
+-- VALIDAÇÃO DE DADOS
+-- -----------------------------------------------------------------------
 
-        -- texto inicial da mensagem
-        'Não foram carregados ',
+-- esta consulta verifica registros presentes
+-- na tabela staging (current_weather_load)
+-- que NÃO existem na tabela final (current_weather)
 
-        -- id da estação
-        cwl.station_id,
+-- objetivo:
+-- identificar possíveis falhas de processamento
 
-        -- separador
-        ': ',
+-- exemplos:
+-- registros não inseridos
+-- inconsistências
+-- falhas de relacionamento
+-- dados rejeitados
 
-        -- cidade
-        cwl.station_city,
+-- IMPORTANTE:
+-- ao invés de mostrar TODOS os registros,
+-- mostramos apenas os primeiros 5
 
-        -- separador
-        ', ',
+-- isso evita:
+-- terminal poluído
+-- excesso de linhas
+-- lentidão visual
+-- dificuldade de leitura
 
-        -- estado
-        cwl.station_state
+SELECT CONCAT(
 
-    )
+ --    -------------------------------------------------------------------
+    -- TEXTO INICIAL
+ --    -------------------------------------------------------------------
 
-    -- alias da tabela staging
-    FROM current_weather_load cwl
+    -- concatena:
+    -- "Não carregado: "
 
-    -- verifica quais registros NÃO existem
-    -- na tabela final current_weather
-    WHERE cwl.station_id NOT IN (
+    'Não carregado: ',
 
-        -- busca os ids existentes
-        SELECT cw.station_id
-        FROM current_weather cw
+ --    -------------------------------------------------------------------
+    -- NOME DA CIDADE
+  --   -------------------------------------------------------------------
 
-    );
+    -- cidade da estação meteorológica
 
-  --  -------------------------------------------------------------------
-    -- QUANTIDADE TOTAL DE LINHAS
-  --  -------------------------------------------------------------------
+    cwl.station_city,
 
-    -- chama a função responsável por:
-    -- contar linhas carregadas
-    -- retornar mensagem formatada
-    
-    -- exemplo:
-    -- Foram carregadas 523 linhas
+ --    -------------------------------------------------------------------
+    -- SEPARADOR VISUAL
+ --    -------------------------------------------------------------------
 
-    SELECT fn_total_linhas_carregadas();
+    ', ',
 
- --   -------------------------------------------------------------------
-    -- FINALIZAÇÃO DO PROCESSAMENTO
- --   -------------------------------------------------------------------
+  --   -------------------------------------------------------------------
+    -- ESTADO
+  --   -------------------------------------------------------------------
 
-    -- mensagem final indicando sucesso
-    SELECT 'OK';
+    -- estado da estação
+
+    cwl.station_state
+
+) AS warning_message
+
+-- -----------------------------------------------------------------------
+-- TABELA STAGING
+-- -----------------------------------------------------------------------
+
+-- tabela temporária responsável por:
+-- armazenar os dados brutos do CSV
+
+FROM current_weather_load cwl
+
+-- alias:
+-- cwl = current_weather_load
+
+-- -----------------------------------------------------------------------
+-- FILTRO DE VALIDAÇÃO
+-- -----------------------------------------------------------------------
+
+WHERE cwl.station_id NOT IN (
+
+  --   -------------------------------------------------------------------
+    -- SUBQUERY
+   --  -------------------------------------------------------------------
+
+    -- busca todos os registros existentes
+    -- na tabela final
+
+    SELECT cw.station_id
+
+    FROM current_weather cw
+
+    -- alias:
+    -- cw = current_weather
+
+)
+
+-- -----------------------------------------------------------------------
+-- LIMITADOR DE RESULTADOS
+-- -----------------------------------------------------------------------
+
+-- retorna apenas 5 exemplos
+
+-- MUITO importante em ETL
+-- principalmente com milhares/milhões de linhas
+
+LIMIT 5;
+
+-- -----------------------------------------------------------------------
+-- QUANTIDADE TOTAL DE LINHAS
+-- -----------------------------------------------------------------------
+
+-- chama a função responsável por:
+-- contar linhas carregadas
+-- retornar mensagem formatada
+
+-- exemplo:
+-- Foram carregadas 523 linhas
+
+SELECT fn_total_linhas_carregadas();
+
+-- -----------------------------------------------------------------------
+-- FINALIZAÇÃO DO PROCESSAMENTO
+-- -----------------------------------------------------------------------
+
+-- mensagem final indicando sucesso
+
+SELECT 'OK';
