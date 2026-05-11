@@ -1,8 +1,14 @@
+
 USE weather;
+
+select * FROM current_weather_load;
 
 -- sempre limpo a tabela antes de carregar novos dados
 TRUNCATE table current_weather_load;
-/* fluxo , no terminal conectar assim   -->    mysql --local-infile=1 -u root -p
+
+
+/* CASO USE TERMINAL PARA CARREGAR
+ fluxo , no terminal conectar assim   -->    mysql --local-infile=1 -u root -p
 verifica tem que esta on
 SHOW VARIABLES LIKE 'local_infile';
  
@@ -13,17 +19,14 @@ depois roda o arquivo sql SOURCE C:/Users/lramo/OneDrive/Documentos/Estudos/sql-
 
 */
 
-select * FROM current_weather_load;
-
 -- carrego os dados, peque essse arquivo para
-LOAD DATA LOCAL INFILE 'C:/Users/lramo/OneDrive/Documentos/Estudos/sql-estudos/project/weather/data/weather.csv'
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/weather.csv'
 INTO TABLE current_weather_load
 
 -- as colunas separadas por vírgula
 FIELDS TERMINATED BY ','
 
 ENCLOSED BY '"'
-
 
 -- as linhas separadas por quebra de linha
 LINES TERMINATED BY '\r\n'
