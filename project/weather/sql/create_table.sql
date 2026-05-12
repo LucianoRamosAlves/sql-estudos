@@ -54,3 +54,10 @@ CREATE TABLE current_weather LIKE current_weather_load;
 SELECT * FROM current_weather_load;
 
 
+ALTER TABLE current_weather
+ADD COLUMN state_name VARCHAR(100),
+ADD COLUMN cod_temp VARCHAR(50),
+ADD COLUMN cod_pressure VARCHAR(50),
+ADD COLUMN flag_last INT;
+
+
