@@ -4,6 +4,8 @@ USE weather;
 
 TRUNCATE TABLE current_weather;
 
+SELECT * FROM current_weather;
+
 INSERT INTO current_weather
 (station_id,
 station_city,
