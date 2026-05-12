@@ -1,29 +1,63 @@
+#!/bin/bash
 
-# esse arquivo é um script bash
-#!/bin/bash 
+# =====================================================
+# ENTRA NA PASTA DO PROJETO
+# =====================================================
 
-cd   /home/luciano/project/weather/
+cd /mnt/c/Users/lramo/OneDrive/Documentos/Estudos/sql-estudos/project/weather || exit 1
 
-# esse if verifica se o arquivo weather.csv existe
-if [ ! -f weather.csv ]; then
+# =====================================================
+# VERIFICA SE CSV EXISTE
+# =====================================================
+
+if [ ! -f data/weather.csv ]; then
+
+    echo "Arquivo weather.csv nao encontrado"
     exit 0
+
 fi
 
-# esse comando carrega os dados no banco
+# =====================================================
+# EXECUTA CARGA STAGING
+# =====================================================
+
 mysql --local_infile=1 \
 -h 127.0.0.1 \
 -D weather \
 -u trucking \
 -pRoger \
 < sql/load_weather.sql \
-> load_weather.log
+> load_weather.log 2>&1
 
-if [ ! -s load_weather.log ]; then #se nao houver erro
-    mysql -h 127.0.0.1 \
+# =====================================================
+# VERIFICA SUCESSO
+# =====================================================
+
+if [ $? -eq 0 ]; then
+
+    echo "Carga executada com sucesso"
+
+    # =================================================
+    # EXECUTA PROCEDURE / ETL FINAL
+    # =================================================
+
+    mysql \
+    -h 127.0.0.1 \
     -D weather \
     -u trucking \
     -pRoger \
     < sql/copy_weather.sql
 
-    mv weather.csv weather.csv.$(date +%Y%m%d%H%M%S)
+    # =================================================
+    # MOVE CSV PROCESSADO
+    # =================================================
+
+    mv data/weather.csv data/weather.csv.$(date +%Y%m%d%H%M%S)
+
+    echo "Arquivo movido"
+
+else
+
+    echo "Erro durante carga"
+
 fi
