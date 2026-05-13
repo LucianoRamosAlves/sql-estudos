@@ -1,4 +1,4 @@
-USE election_etl_project;
+USE election;
 
 -- -----------------------------
 -- -------- PARTE BRONZE -------
@@ -32,5 +32,6 @@ CREATE TABLE IF NOT EXISTS bronze_cargos(
     ano_eleicao DATE
 );
 
+SELECT * FROM bronze_cargos;
 -- confirmar tabelas criadas
 SHOW TABLES;

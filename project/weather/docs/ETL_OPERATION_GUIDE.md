@@ -99,13 +99,13 @@ echo $DB_USER
 ```bash
 echo $DB_NAME
 ```
-
+mysql -h $DB_HOST -u $DB_USER -p
 ---
 
 # 6. TESTAR CONEXÃO MYSQL
 
 ```bash
-mysql -h $DB_HOST -u $DB_USER -p
+mysql -h 172.28.208.1 -u root -p
 ```
 
 Digite senha.
