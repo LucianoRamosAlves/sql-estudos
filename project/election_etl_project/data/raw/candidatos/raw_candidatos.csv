@@ -1,0 +1,109 @@
+candidato_id,nome,partido,cargo,cidade,idade
+199,Bianca da Costa,NOVO,Senador,Peixoto das Pedras,64
+454,Luiz Fernando Moura,UNI,Prefeito,Almeida,55
+277,Yago Pires,PDT,VEREADOR,da Cruz,30
+524,Larissa Peixoto,ABC,Prefeito,Lima,43
+437,Enzo Silveira,UNI,Senador,Gomes de Minas,83
+910,Lucas Gabriel Viana,XYZ,Prefeito,Silveira,27
+671,,ABC,Prefeito,Almeida de Minas,74
+50,Cauã Peixoto,XYZ,Governador,Peixoto do Amparo,53
+780,Ana Vitória Costela,DEM,Governador,Porto,81
+378,Samuel Silveira,ABC,Prefeito,Aragão Alegre,80
+471,Vitor Hugo Carvalho,UNI,Governador,Moura,39
+691,Luana da Cruz,PDT,GOVERNADOR,da Costa do Campo,45
+654,Thiago Caldeira,UNI,Governador,Costa,150
+688,ian pires,QWE,Vereador,NULL,20
+328,Davi Aragão,DEM,Vereador,Monteiro do Campo,18
+640,Juliana da Mata,UNI,Governador,Cavalcanti,58
+592,Marcelo Oliveira,ABC,Prefeito,Alves,67
+79,alice cavalcanti,ABC,Governador,Vieira de Goiás,150
+901,,XYZ,VEREADOR,da Cruz,64
+776,Carolina Melo,XYZ,Vereador,da Mata da Serra,55
+70,Luiz Gustavo Sales,QWE,Governador,Ferreira,79
+236,Pedro Miguel Fogaça,NOVO,Senador,Aragão Grande,53
+153,André Vieira,XYZ,Vereador,da Conceição,52
+482,Gabriel Rezende,ABC,Governador,Almeida,150
+870,Cecília Freitas,ABC,Prefeito,da Conceição,76
+651,Dra. Lorena Melo,QWE,Vereador,das Neves do Norte,57
+62,Otávio Nascimento   ,xyz,Prefeito,da Rosa de Goiás,31
+882,Cauã Farias,PDT,Governador,Silveira,80
+70,Sra. Ana Julia Ramos,QWE,Vereador,Ribeiro Paulista,50
+570,Sophie da Costa,QWE,Governador,Peixoto,39
+613,Yago da Mota,PDT,Vereador,Cunha,21
+363,João Felipe da Rocha,DEM,Governador,Freitas,150
+642,Luiz Gustavo da Rocha,ABC,GOVERNADOR,da Mata,47
+834,Sophie da Mata,QWE,Vereador,Fernandes de da Mota,80
+916,sofia rodrigues,XYZ,Vereador,Nunes,49
+657,Helena Fernandes,PDT,Vereador,Aragão,30
+499,Luiz Otávio Rezende,DEM,Vereador,Correia de Carvalho,53
+836,milena moura,PDT,Senador,Silveira,19
+945,Kamilly Santos,xyz,Prefeito,Dias,55
+504,Sophie Azevedo,novo,Vereador,Pires,21
+321,Dr. Igor Jesus,QWE,Vereador,Nascimento de da Mota,80
+435,Bernardo Silveira,pdt,Governador,Duarte de Goiás,62
+448,joão felipe silva,QWE,Vereador,Peixoto,32
+196,Thales Lima,PDT,Prefeito,Caldeira,41
+412,Francisco da Conceição,DEM,Governador,da Paz,38
+839,Pedro Araújo   ,QWE,Governador,Pinto de Vieira,62
+497,Alana Nunes,XYZ,Senador,Nunes,87
+315,Bryan da Costa,UNI,VEREADOR,Rodrigues da Mata,44
+655,Gustavo Henrique Mendes,DEM,Prefeito,Vieira das Pedras,85
+224,,NOVO,Vereador,NULL,48
+46,Camila Costela,NOVO,Prefeito,Souza,46
+374,Cecília Monteiro,NOVO,Governador,Ferreira da Serra,80
+647,Gabriel Vieira,QWE,Vereador,Viana do Oeste,50
+388,Sr. Francisco Mendes,PDT,Prefeito,Novaes,73
+766,João da Mota,ABC,Governador,da Luz de Almeida,64
+812,Ana Júlia da Paz,UNI,Vereador,Melo do Campo,54
+710,,DEM,Governador,Alves,56
+440,,xyz,Governador,Monteiro de Viana,51
+144,srta. laís das neves   ,NOVO,Prefeito,Gonçalves,65
+819,Júlia da Rosa,DEM,Governador,da Costa do Oeste,87
+366,Rafael da Rosa,PDT,Senador,Duarte,65
+370,Srta. Maria Alice Duarte,NOVO,Prefeito,Viana,20
+377,João Lucas Mendes,NOVO,Senador,Pires de da Cunha,-1
+338,Emilly Cardoso   ,ABC,Prefeito,Martins,84
+166,Dr. Augusto Cunha   ,UNI,Prefeito,Pinto Verde,67
+776,,PDT,Governador,Cavalcanti,44
+908,Luiz Gustavo da Mata,XYZ,Vereador,Melo da Praia,53
+602,renan da conceição,ABC,Governador,Nunes,81
+971,Matheus Moura,PDT,Governador,Duarte da Praia,79
+862,Kaique Moura,DEM,Prefeito,Gonçalves,38
+744,Marcelo Lima,QWE,Governador,Rezende,24
+286,Bruno Lopes,XYZ,Prefeito,Martins de Correia,89
+878,gabriela gomes,ABC,Vereador,Aragão de Minas,64
+501,Otávio da Rosa,XYZ,Vereador,Lima de Fernandes,45
+553,Davi Luiz Caldeira,ABC,Prefeito,Correia da Praia,67
+38,Augusto Pires,PDT,SENADOR,Costela de Araújo,36
+237,Joana Moura,DEM,Governador,Costela,64
+51,Sophie Sales   ,DEM,Prefeito,Almeida,61
+401,Renan da Conceição,UNI,Prefeito,Correia de Campos,54
+161,Bryan Pereira,PDT,Prefeito,Martins,12
+608,Emilly Moreira   ,PDT,Governador,Melo,39
+493,Lorenzo da Costa,ABC,Governador,Sales de Minas,150
+228,Eduarda Barbosa,DEM,Prefeito,Souza do Norte,73
+479,Srta. Bárbara Oliveira   ,PDT,Governador,Almeida de Farias,76
+239,João Lucas Porto,NOVO,Prefeito,Caldeira do Campo,49
+678,Eloah Farias,NOVO,Governador,Moreira,32
+474,Anthony da Rosa,QWE,Prefeito,Campos do Galho,68
+768,Julia Barbosa,XYZ,Vereador,Freitas de Rezende,24
+143,Vitor Duarte,qwe,Prefeito,Freitas,12
+710,Sra. Lorena Cardoso,DEM,Senador,Almeida do Oeste,56
+860,Calebe Vieira   ,novo,Vereador,Duarte,25
+94,evelyn das neves,NOVO,Senador,Silva do Oeste,68
+632,Lucca Mendes,XYZ,Vereador,Caldeira Verde,89
+464,isabelly nogueira,NOVO,Vereador,Santos,73
+916,Srta. Bianca Pinto,ABC,Vereador,Costela,24
+942,maria eduarda moura,dem,Governador,Martins de Carvalho,24
+216,Alana Farias,PDT,Vereador,Duarte,56
+881,dr. vinicius ferreira   ,NOVO,Prefeito,Castro Paulista,60
+864,Raquel Nogueira,UNI,Senador,da Paz,18
+530,Laís da Paz,QWE,Prefeito,Costela de Monteiro,26
+199,Bianca da Costa,NOVO,Senador,Peixoto das Pedras,64
+454,Luiz Fernando Moura,UNI,Prefeito,Almeida,55
+277,Yago Pires,PDT,VEREADOR,da Cruz,30
+524,Larissa Peixoto,ABC,Prefeito,Lima,43
+437,Enzo Silveira,UNI,Senador,Gomes de Minas,83
+910,Lucas Gabriel Viana,XYZ,Prefeito,Silveira,27
+671,,ABC,Prefeito,Almeida de Minas,74
+50,Cauã Peixoto,XYZ,Governador,Peixoto do Amparo,53
