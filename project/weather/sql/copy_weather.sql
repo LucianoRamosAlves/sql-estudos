@@ -1,11 +1,9 @@
 USE weather;
 
-CALL prc_load_current_weather();
 
 -- =========================================================
 -- REMOVE PROCEDURE ANTIGA
 -- =========================================================
-
 DROP PROCEDURE IF EXISTS prc_load_current_weather;
 
 DELIMITER $$
@@ -218,7 +216,7 @@ BEGIN
         -- TEXTO
         -- =====================================================
 
-        UPPER(TRIM(wind_direction)) AS wind_direction,
+        IFNULL(UPPER(TRIM(wind_direction)), 'N/A') AS wind_direction,
 
 
         -- =====================================================
