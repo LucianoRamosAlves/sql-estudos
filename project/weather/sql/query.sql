@@ -1,3 +1,6 @@
+-- consultas de tratamento
+
+
 USE weather;
 
 -- aaqui vou verifica as qualidades da minha tabela
