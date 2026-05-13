@@ -3,6 +3,14 @@ SET @starttime = NOW(); -- inicia o cronometro
 -- seleciona o banco de dados que será utilizado
 USE weather;
 
+-- show global variables like 'local_infile';
+-- set global local_infile = 1;
+
+ -- select * from current_weather_load;
+ -- select * from current_weather;
+ --  TRUNCATE TABLE current_weather;
+
+
  --   -------------------------------------------------------------------
     -- INÍCIO DO PROCESSO
  --   -------------------------------------------------------------------
@@ -23,8 +31,8 @@ USE weather;
 
     -- carrega os dados do arquivo csv
     -- LOCAL = arquivo localizado na máquina cliente
-    LOAD DATA LOCAL INFILE 
-    'C:/Users/lramo/OneDrive/Documentos/Estudos/sql-estudos/project/weather/data/weather.csv'
+    LOAD DATA LOCAL INFILE
+      '/mnt/c/Users/lramo/OneDrive/Documentos/Estudos/sql-estudos/project/weather/data/weather.csv'
 
     -- tabela que receberá os dados
     INTO TABLE current_weather_load
@@ -270,3 +278,5 @@ SELECT fn_total_linhas_carregadas();
 -- mensagem final indicando sucesso
 
 SELECT 'OK';
+
+CALL prc_load_current_weather();
