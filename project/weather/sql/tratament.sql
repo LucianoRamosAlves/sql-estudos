@@ -1,3 +1,6 @@
+-- Apenas testes de tratamento de erro
+
+
 SELECT 
 station_id,
 trim(station_city) as station_city,
