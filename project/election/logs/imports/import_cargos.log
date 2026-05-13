@@ -1,0 +1,35 @@
+[2026-05-13 19:44:19] START IMPORT bronze_cargos
+[2026-05-13 19:44:19] ERROR bronze_cargos
+[2026-05-13 19:46:25] START IMPORT bronze_cargos
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+[2026-05-13 19:46:25] ERROR bronze_cargos
+[2026-05-13 19:53:29] START IMPORT bronze_cargos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+ERROR 2005 (HY000): Unknown MySQL server host '172.28.208.1' (-2)
+[2026-05-13 19:53:29] ERROR bronze_cargos
+[2026-05-13 19:56:10] START IMPORT bronze_cargos
+ERROR 2005 (HY000): Unknown MySQL server host '172.28.208.1' (-2)
+[2026-05-13 19:56:10] ERROR bronze_cargos
+[2026-05-13 19:57:16] START IMPORT bronze_cargos
+ERROR 2005 (HY000): Unknown MySQL server host '172.28.208.1' (-2)
+[2026-05-13 19:57:16] ERROR bronze_cargos
+[2026-05-13 19:58:46] START IMPORT bronze_cargos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+ERROR 2005 (HY000): Unknown MySQL server host '172.28.208.1' (-2)
+[2026-05-13 19:58:46] ERROR bronze_cargos
+[2026-05-13 19:59:47] START IMPORT bronze_cargos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+ERROR 2005 (HY000): Unknown MySQL server host '172.28.208.1' (-2)
+[2026-05-13 19:59:47] ERROR bronze_cargos
+[2026-05-13 20:04:45] START IMPORT bronze_cargos
+ERROR 2005 (HY000): Unknown MySQL server host '-D' (-2)
+[2026-05-13 20:04:45] ERROR bronze_cargos
+[2026-05-13 20:06:52] START IMPORT bronze_cargos
+ERROR 2005 (HY000): Unknown MySQL server host '-D' (-2)
+[2026-05-13 20:06:52] ERROR bronze_cargos
+[2026-05-13 20:08:33] START IMPORT bronze_cargos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-13 20:08:33] SUCCESS bronze_cargos
+[2026-05-13 20:10:54] START IMPORT bronze_cargos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-13 20:10:54] SUCCESS bronze_cargos
