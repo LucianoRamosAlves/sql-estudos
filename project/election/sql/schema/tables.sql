@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS bronze_votos(
     titulo_eleitor INT,
     candidato_id INT,
     eleitor VARCHAR(100),
+    sexo VARCHAR(50),
     cidade VARCHAR(100),
     data_voto DATE
 );
