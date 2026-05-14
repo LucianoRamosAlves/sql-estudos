@@ -58,7 +58,7 @@ mkdir -p "$LOG_PATH"
 # arquivo final:
 # logs/imports/import_cargos.log
 
-LOG_FILE="$LOG_PATH/import_cargos.log"
+LOG_FILE="$LOG_PATH/import_cargos.log" 
 
 # =====================================================
 # INÍCIO DO PROCESSO
@@ -134,3 +134,92 @@ else
     echo "[$DATE] ERROR bronze_cargos" >> "$LOG_FILE"
 
 fi
+
+
+# =====================================================
+# FIM DO PROCESSO
+
+
+
+
+
+# =====================================================
+# Agora o script de votos
+# =====================================================
+
+LOG_FILE="$LOG_PATH/import_votos.log" 
+
+# =====================================================
+
+echo "[$DATE] START IMPORT bronze_votos" >> "$LOG_FILE"
+
+
+mysql --local-infile=1 \
+-h $DB_HOST \
+-D $DB_NAME \
+-u $DB_USER \
+-p$DB_PASSWORD \
+< "$SQL_PATH/load_votos.sql" \
+>> "$LOG_FILE" 2>&1
+
+
+if [ $? -eq 0 ]; then
+
+    # grava sucesso no log
+
+    echo "[$DATE] SUCCESS bronze_votos" >> "$LOG_FILE"
+
+else
+
+    # grava erro no log
+
+    echo "[$DATE] ERROR bronze_votos" >> "$LOG_FILE"
+
+fi
+
+
+# =====================================================
+# FIM DO PROCESSO
+# =====================================================
+
+
+
+
+# =====================================================
+# Agora o script de candidatos
+# =====================================================
+
+LOG_FILE="$LOG_PATH/import_candidatos.log" 
+
+# =====================================================
+
+echo "[$DATE] START IMPORT bronze_candidatos" >> "$LOG_FILE"
+
+
+mysql --local-infile=1 \
+-h $DB_HOST \
+-D $DB_NAME \
+-u $DB_USER \
+-p$DB_PASSWORD \
+< "$SQL_PATH/load_candidatos.sql" \
+>> "$LOG_FILE" 2>&1
+
+
+if [ $? -eq 0 ]; then
+
+    # grava sucesso no log
+
+    echo "[$DATE] SUCCESS bronze_candidatos" >> "$LOG_FILE"
+
+else
+
+    # grava erro no log
+
+    echo "[$DATE] ERROR bronze_candidatos" >> "$LOG_FILE"
+
+fi
+
+
+# =====================================================
+# FIM DO PROCESSO
+# =====================================================
