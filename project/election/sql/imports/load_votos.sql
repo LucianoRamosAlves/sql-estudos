@@ -43,6 +43,7 @@ INTO TABLE bronze_votos
 titulo_eleitor,
 candidato_id,
 eleitor,
+sexo,
 cidade,
 data_voto
-)  
+) 
