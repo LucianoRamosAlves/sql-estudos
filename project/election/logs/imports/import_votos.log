@@ -119,3 +119,12 @@ mysql: [Warning] Using a password on the command line interface can be insecure.
 [2026-05-14 14:06:15] Dados inseridos com sucesso
 [2026-05-14 14:06:15] PROCESSO EXECUTADO COM SUCESSO
 =-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 14:33:55] START IMPORT bronze_votos
+[2026-05-14 14:33:55] Testando conexão com MySQL...
+1
+[2026-05-14 14:33:55] Conexão MySQL estabelecida com sucesso
+[2026-05-14 14:33:55] Carregando CSV votos...
+[2026-05-14 14:33:55] CSV carregado com sucesso
+[2026-05-14 14:33:55] Dados inseridos com sucesso
+[2026-05-14 14:33:55] PROCESSO EXECUTADO COM SUCESSO
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
