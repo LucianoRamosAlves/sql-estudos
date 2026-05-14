@@ -124,3 +124,57 @@ ERROR 1045 (28000): Access denied for user '-pl4sfl4u'@'172.28.221.105' (using p
 [2026-05-14 14:33:55] Dados inseridos com sucesso
 [2026-05-14 14:33:55] PROCESSO EXECUTADO COM SUCESSO
 =-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 15:16:37] START IMPORT bronze_candidatos
+[2026-05-14 15:16:37] Testando conexão com MySQL...
+1
+[2026-05-14 15:16:37] Conexão MySQL estabelecida com sucesso
+[2026-05-14 15:16:37] Carregando CSV candidatos...
+ERROR 1064 (42000) at line 11: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT CONCAT(
+   'Tempo total: ',
+   TIMESTAMPDIFF(
+   SECOND,
+   @starttime,
+ ' at line 47
+[2026-05-14 15:16:37] ERRO ao importar CSV candidatos
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 15:20:08] START IMPORT bronze_candidatos
+[2026-05-14 15:20:08] Testando conexão com MySQL...
+1
+[2026-05-14 15:20:08] Conexão MySQL estabelecida com sucesso
+[2026-05-14 15:20:08] Carregando CSV candidatos...
+execution_time
+Tempo total: 0 segundos
+[2026-05-14 15:20:08] CSV carregado com sucesso
+[2026-05-14 15:20:08] Dados inseridos com sucesso
+[2026-05-14 15:20:08] PROCESSO EXECUTADO COM SUCESSO
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 15:32:19] START IMPORT bronze_candidatos
+[2026-05-14 15:32:19] Testando conexão com MySQL...
+1
+[2026-05-14 15:32:19] Conexão MySQL estabelecida com sucesso
+[2026-05-14 15:32:19] Carregando CSV candidatos...
+[2026-05-14 15:32:19] CSV carregado com sucesso
+[2026-05-14 15:32:19] Dados inseridos com sucesso
+[2026-05-14 15:32:19] PROCESSO EXECUTADO COM SUCESSO
+[2026-05-14 15:32:19] Tempo total: 1 segundos
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 15:38:14] START IMPORT bronze_candidatos
+[2026-05-14 15:38:14] Testando conexão com MySQL...
+1
+[2026-05-14 15:38:14] Conexão MySQL estabelecida com sucesso
+[2026-05-14 15:38:14] Carregando CSV candidatos...
+[2026-05-14 15:38:14] CSV carregado com sucesso
+[2026-05-14 15:38:14] Dados inseridos com sucesso
+[2026-05-14 15:38:14] PROCESSO EXECUTADO COM SUCESSO
+[2026-05-14 15:38:14] Tempo total: 1 segundos
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 15:43:00] START IMPORT bronze_candidatos
+[2026-05-14 15:43:00] Testando conexão com MySQL...
+1
+[2026-05-14 15:43:00] Conexão MySQL estabelecida com sucesso
+[2026-05-14 15:43:00] Carregando CSV candidatos...
+[2026-05-14 15:43:00] CSV carregado com sucesso
+[2026-05-14 15:43:00] Dados inseridos com sucesso
+[2026-05-14 15:43:00] PROCESSO EXECUTADO COM SUCESSO
+[2026-05-14 15:43:00] Tempo de importação: 2 segundos
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
