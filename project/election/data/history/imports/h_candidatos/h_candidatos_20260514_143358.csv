@@ -1,0 +1,101 @@
+candidato_id,nome,partido,cargo,cidade,idade
+43,Vitor Fogaça,QWE,Vereador,Lima,43
+27,Miguel Freitas,xyz,Senador,Castro de Aragão,72
+51,Sr. Arthur Castro,NOVO,Governador,Sales,74
+46,Fernanda Monteiro,ABC,Prefeito,Ramos,84
+30,Erick Barbosa,XYZ,Vereador,Almeida de Barbosa,67
+26,Sr. Cauã Novaes,UNI,Senador,Dias,39
+17,Olivia Costela,NOVO,Vereador,Sales,70
+30,sra. pietra barros,UNI,Prefeito,Pereira,82
+80,eloah lopes,XYZ,Senador,Mendes dos Dourados,32
+18,João Pedro Cardoso,qwe,Governador,Martins das Flores,34
+8,Elisa Dias,XYZ,Vereador,da Cruz,67
+2,Sr. Gustavo Henrique Rocha,UNI,Governador,Rodrigues,28
+20,Thiago Carvalho,UNI,Vereador,Santos,88
+23,Lara Jesus,ABC,Prefeito,Jesus do Campo,78
+40,Rafael Martins,XYZ,Vereador,Moraes da Mata,23
+10,Marina Fernandes,QWE,Prefeito,Moreira da Prata,36
+25,murilo da cunha,abc,Senador,Peixoto,75
+56,Agatha Nunes,PDT,Prefeito,Porto,48
+29,Isabella Pereira,DEM,Governador,Moreira,41
+35,Gustavo Rezende,PDT,Prefeito,Fogaça,90
+55,Milena Duarte,UNI,Prefeito,Araújo de Goiás,81
+27,mirella pinto,DEM,Governador,Martins,43
+21,João Gomes,UNI,Senador,Vieira do Sul,44
+69,Eduardo Alves,XYZ,Senador,Melo do Oeste,61
+16,Isis Jesus,QWE,Prefeito,Sales da Mata,15
+25,Dr. Enzo Gabriel Rocha,QWE,Governador,Carvalho,46
+26,Davi Nogueira,DEM,Senador,das Neves,54
+65,Juliana da Cunha,XYZ,Governador,Farias,56
+26,Sofia Moura,ABC,Senador,Nogueira,-1
+19,Bruna Ribeiro,QWE,Vereador,Teixeira,24
+47,Ana Sophia da Conceição,NOVO,Prefeito,da Mata,83
+76,Pedro Lucas Sales,XYZ,Vereador,da Costa da Serra,50
+71,Alexia Dias,XYZ,Governador,da Luz,-1
+15,Dr. Davi Lucca Rocha   ,ABC,Prefeito,Teixeira,62
+41,joão gabriel nunes,ABC,Vereador,Azevedo,39
+71,Sra. Amanda Lima,ABC,Governador,Pereira dos Dourados,58
+7,Letícia Campos,UNI,Governador,Cardoso de Vieira,76
+49,maria cecília moreira,DEM,Senador,Pires Verde,82
+73,Davi Luiz Novaes,XYZ,Senador,Mendes de Rocha,48
+53,Cauê Monteiro,ABC,Governador,Dias de Melo,55
+23,theo sales,PDT,Vereador,Caldeira da Serra,49
+2,Isabella Cardoso,QWE,Prefeito,Lima da Mata,39
+25,Isadora Lima,PDT,Prefeito,Costela,81
+53,Clara Novaes,DEM,Prefeito,Campos,29
+1,Ana Julia Gomes,XYZ,Prefeito,Freitas,78
+28,Carlos Eduardo Pinto,pdt,Senador,Moraes,63
+4,Isabelly Rocha,novo,Vereador,Cardoso do Campo,74
+70,Clarice Novaes,PDT,Senador,Sales,52
+25,Enzo Novaes,QWE,Senador,da Luz do Galho,82
+29,Luana Rocha,UNI,Senador,Lima,60
+31,Maitê Almeida   ,ABC,Senador,Teixeira de Ribeiro,76
+16,João Guilherme Fogaça,PDT,Senador,Barbosa,30
+43,Sr. Emanuel Rezende,xyz,Prefeito,NULL,61
+52,esther silva,NOVO,Vereador,NULL,42
+3,Dra. Amanda da Cruz,XYZ,Governador,da Mota das Pedras,15
+35,Vicente Mendes,ABC,Vereador,da Paz,41
+7,Daniela Pinto,pdt,Senador,Souza,27
+34,Sarah Dias,NOVO,Senador,Lima Grande,36
+24,Arthur Nascimento,PDT,Senador,Nascimento,72
+19,Francisco Alves   ,NOVO,Governador,Rocha,84
+65,Bruna Monteiro,PDT,Senador,Jesus de Goiás,58
+76,Milena Cardoso   ,DEM,Prefeito,Gonçalves da Serra,76
+58,Joana Teixeira,abc,Prefeito,Ramos do Amparo,22
+38,Pedro Henrique da Costa,XYZ,Governador,Porto da Praia,56
+32,Sr. João Guilherme Viana,XYZ,Governador,Silveira das Pedras,67
+29,Calebe da Cruz,QWE,Senador,Gonçalves de da Costa,-1
+34,Carlos Eduardo Mendes,UNI,Senador,Martins de Pereira,22
+51,Henrique Pires,UNI,Senador,Mendes,21
+14,Juan da Mota   ,PDT,Prefeito,Monteiro de Mendes,81
+7,Ana Beatriz Silveira,UNI,Vereador,Lima,67
+71,gabrielly lima,UNI,Governador,Alves,71
+72,Gustavo Henrique da Paz,NOVO,Senador,da Costa,77
+32,Arthur Viana,NOVO,Prefeito,Gonçalves,82
+71,Anthony Cavalcanti,DEM,Vereador,Nunes do Campo,27
+49,Calebe da Costa,NOVO,Governador,Pires,74
+1,Matheus Costela,UNI,Senador,Azevedo de Dias,26
+21,Valentina Aragão,NOVO,Prefeito,Castro,43
+79,Sr. Gustavo Henrique da Paz,ABC,Senador,Alves,46
+35,Giovanna Dias,XYZ,Vereador,da Rocha do Amparo,25
+14,beatriz rocha,UNI,Governador,Rodrigues,81
+34,Cauê Sales,NOVO,Vereador,Nogueira,82
+28,Marina Vieira,XYZ,Prefeito,Azevedo,80
+78,Raul Pereira,UNI,Governador,Teixeira,24
+67,Joaquim Dias,XYZ,Prefeito,Almeida de Araújo,54
+33,João Pedro da Mata,DEM,Vereador,Silva,22
+48,Gabrielly Ribeiro,UNI,Governador,Porto da Serra,55
+74,Beatriz Moura   ,PDT,Prefeito,Correia,70
+62,,dem,Governador,Carvalho Alegre,35
+63,Maria Sophia Lopes,PDT,Vereador,Almeida de Sales,84
+23,Felipe Silva   ,QWE,Senador,Sales de Minas,64
+52,Elisa da Cruz,NOVO,Governador,Dias,85
+52,Marcelo Rezende,ABC,Prefeito,Mendes de Minas,58
+17,Heitor Oliveira   ,uni,Prefeito,Moraes,27
+39,Joana da Rocha,QWE,Prefeito,Pinto,15
+22,Maria Luiza da Cruz   ,NOVO,Vereador,Duarte,32
+44,Daniela Correia,xyz,Governador,Freitas,50
+80,,NOVO,Vereador,das Neves,70
+48,,XYZ,Senador,Santos do Norte,69
+25,Vitor Costa,PDT,Vereador,Barros,49
+18,Stella Peixoto,QWE,Senador,da Luz Grande,39
