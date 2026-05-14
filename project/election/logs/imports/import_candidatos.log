@@ -1,3 +1,117 @@
 [2026-05-14 09:09:50] START IMPORT bronze_candidatos
 mysql: [Warning] Using a password on the command line interface can be insecure.
 [2026-05-14 09:09:50] SUCCESS bronze_candidatos
+[2026-05-14 10:09:31] START IMPORT bronze_candidatos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-14 10:09:31] SUCCESS bronze_candidatos
+[2026-05-14 10:11:56] START IMPORT bronze_candidatos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-14 10:11:56] SUCCESS bronze_candidatos
+[2026-05-14 10:13:23] START IMPORT bronze_candidatos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-14 10:13:23] SUCCESS bronze_candidatos
+[2026-05-14 10:14:48] START IMPORT bronze_candidatos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-14 10:14:48] SUCCESS bronze_candidatos
+[2026-05-14 10:16:07] START IMPORT bronze_candidatos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-14 10:16:07] SUCCESS bronze_candidatos
+[2026-05-14 10:43:26] START IMPORT bronze_candidatos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-14 10:43:26] SUCCESS bronze_candidatos
+[2026-05-14 10:45:42] START IMPORT bronze_candidatos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-14 10:45:42] SUCCESS bronze_candidatos
+[2026-05-14 10:53:45] START IMPORT bronze_candidatos
+[2026-05-14 10:53:45] Testando conexão com MySQL...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+1
+[2026-05-14 10:53:45] Conexão MySQL estabelecida com sucesso
+[2026-05-14 10:53:45] Carregando CSV candidatos...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-14 10:53:45] CSV carregado com sucesso
+[2026-05-14 10:53:45] Dados inseridos com sucesso
+[2026-05-14 10:53:45] PROCESSO EXECUTADO COM SUCESSO
+[2026-05-14 10:57:42] START IMPORT bronze_candidatos
+[2026-05-14 10:57:42] Testando conexão com MySQL...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+1
+[2026-05-14 10:57:42] Conexão MySQL estabelecida com sucesso
+[2026-05-14 10:57:42] Carregando CSV candidatos...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-14 10:57:42] CSV carregado com sucesso
+[2026-05-14 10:57:42] Dados inseridos com sucesso
+[2026-05-14 10:57:42] PROCESSO EXECUTADO COM SUCESSO
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 10:58:28] START IMPORT bronze_candidatos
+[2026-05-14 10:58:28] Testando conexão com MySQL...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+1
+[2026-05-14 10:58:28] Conexão MySQL estabelecida com sucesso
+[2026-05-14 10:58:28] Carregando CSV candidatos...
+ERROR 1045 (28000): Access denied for user 'root'@'172.28.221.105' (using password: YES)
+[2026-05-14 10:58:28] ERRO ao importar CSV candidatos
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 10:59:43] START IMPORT bronze_candidatos
+[2026-05-14 10:59:43] Testando conexão com MySQL...
+mysql: [Warning] Using a password on the command line interface can be insecure.
+1
+[2026-05-14 10:59:43] Conexão MySQL estabelecida com sucesso
+[2026-05-14 10:59:43] Carregando CSV candidatos...
+ERROR 1045 (28000): Access denied for user '-pl4sfl4u'@'172.28.221.105' (using password: NO)
+[2026-05-14 10:59:43] ERRO ao importar CSV candidatos
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 11:18:07] START IMPORT bronze_candidatos
+[2026-05-14 11:18:07] Testando conexão com MySQL...
+1
+[2026-05-14 11:18:07] Conexão MySQL estabelecida com sucesso
+[2026-05-14 11:18:07] Carregando CSV candidatos...
+[2026-05-14 11:18:07] CSV carregado com sucesso
+[2026-05-14 11:18:07] Dados inseridos com sucesso
+[2026-05-14 11:18:07] PROCESSO EXECUTADO COM SUCESSO
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 11:21:58] START IMPORT bronze_candidatos
+[2026-05-14 11:21:58] Testando conexão com MySQL...
+1
+[2026-05-14 11:21:58] Conexão MySQL estabelecida com sucesso
+[2026-05-14 11:21:58] Carregando CSV candidatos...
+[2026-05-14 11:21:58] CSV carregado com sucesso
+[2026-05-14 11:21:58] Dados inseridos com sucesso
+[2026-05-14 11:21:58] PROCESSO EXECUTADO COM SUCESSO
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 12:07:46] START IMPORT bronze_candidatos
+[2026-05-14 12:07:46] Testando conexão com MySQL...
+1
+[2026-05-14 12:07:46] Conexão MySQL estabelecida com sucesso
+[2026-05-14 12:07:46] Carregando CSV candidatos...
+[2026-05-14 12:07:46] CSV carregado com sucesso
+[2026-05-14 12:07:46] Dados inseridos com sucesso
+[2026-05-14 12:07:46] PROCESSO EXECUTADO COM FALHA
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 12:11:00] START IMPORT bronze_candidatos
+[2026-05-14 12:11:00] Testando conexão com MySQL...
+1
+[2026-05-14 12:11:00] Conexão MySQL estabelecida com sucesso
+[2026-05-14 12:11:00] Carregando CSV candidatos...
+[2026-05-14 12:11:00] CSV carregado com sucesso
+[2026-05-14 12:11:00] Dados inseridos com sucesso
+[2026-05-14 12:11:00] PROCESSO EXECUTADO COM FALHA
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 13:55:29] START IMPORT bronze_candidatos
+[2026-05-14 13:55:29] Testando conexão com MySQL...
+1
+[2026-05-14 13:55:29] Conexão MySQL estabelecida com sucesso
+[2026-05-14 13:55:29] Carregando CSV candidatos...
+[2026-05-14 13:55:29] CSV carregado com sucesso
+[2026-05-14 13:55:29] Dados inseridos com sucesso
+[2026-05-14 13:55:29] PROCESSO EXECUTADO COM SUCESSO
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 14:06:15] START IMPORT bronze_candidatos
+[2026-05-14 14:06:15] Testando conexão com MySQL...
+1
+[2026-05-14 14:06:15] Conexão MySQL estabelecida com sucesso
+[2026-05-14 14:06:15] Carregando CSV candidatos...
+[2026-05-14 14:06:15] CSV carregado com sucesso
+[2026-05-14 14:06:15] Dados inseridos com sucesso
+[2026-05-14 14:06:15] PROCESSO EXECUTADO COM SUCESSO
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
