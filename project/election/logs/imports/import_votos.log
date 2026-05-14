@@ -1,0 +1,3 @@
+[2026-05-14 09:09:50] START IMPORT bronze_votos
+mysql: [Warning] Using a password on the command line interface can be insecure.
+[2026-05-14 09:09:50] SUCCESS bronze_votos
