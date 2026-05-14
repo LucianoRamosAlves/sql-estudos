@@ -4,14 +4,13 @@ USE election;
 -- -------- PARTE BRONZE -------
 -- -----------------------------
 
-
 CREATE TABLE IF NOT EXISTS bronze_votos(
     titulo_eleitor INT,
     candidato_id INT,
     eleitor VARCHAR(100),
     sexo VARCHAR(50),
     cidade VARCHAR(100),
-    data_voto DATE
+    data_voto DATETIME
 );
 
 
@@ -39,3 +38,7 @@ SHOW TABLES;
 SELECT * FROM bronze_cargos;
 SELECT * FROM bronze_votos;
 select * from bronze_candidatos;
+
+SELECT *
+FROM bronze_votos
+LIMIT 5;
