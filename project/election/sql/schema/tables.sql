@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS bronze_votos(
     eleitor VARCHAR(100),
     sexo VARCHAR(50),
     cidade VARCHAR(100),
-    data_voto DATETIME
+    data_voto VARCHAR(30)
 );
 
 
@@ -24,12 +24,13 @@ CREATE TABLE IF NOT EXISTS bronze_candidatos(
 );
 
 
+
 CREATE TABLE IF NOT EXISTS bronze_cargos(
     cargo_id INT,
     nome_cargo VARCHAR(100),
     esfera VARCHAR(100),
     vagas INT,
-    ano_eleicao DATE
+    ano_eleicao VARCHAR(30)
 );
 
 -- confirmar tabelas criadas
@@ -41,4 +42,4 @@ select * from bronze_candidatos;
 
 SELECT *
 FROM bronze_votos
-LIMIT 5;
+LIMIT 10;
