@@ -10,7 +10,6 @@ LOAD DATA LOCAL INFILE
 '/mnt/c/Users/lramo/OneDrive/Documentos/Estudos/sql-estudos/project/election/data/raw/cargos/raw_cargos.csv'
 
 
-
 -- tabela que receberá os dados
 INTO TABLE bronze_cargos
 
@@ -45,4 +44,4 @@ nome_cargo,
 esfera,
 vagas,
 ano_eleicao
-)  
+)
