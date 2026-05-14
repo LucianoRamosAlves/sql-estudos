@@ -265,3 +265,23 @@ Tempo total: 0 segundos
 [2026-05-14 16:00:54] PROCESSO EXECUTADO COM SUCESSO
 [2026-05-14 16:00:54] Tempo de importação: 1 segundos
 =-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 16:12:44] START IMPORT bronze_cargos
+[2026-05-14 16:12:44] Testando conexão com MySQL...
+1
+[2026-05-14 16:12:44] Conexão MySQL estabelecida com sucesso
+[2026-05-14 16:12:44] Carregando CSV cargos...
+[2026-05-14 16:12:44] CSV carregado com sucesso
+[2026-05-14 16:12:44] Dados inseridos com sucesso
+[2026-05-14 16:12:44] PROCESSO EXECUTADO COM SUCESSO
+[2026-05-14 16:12:44] Tempo de importação: 1 segundos
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-14 16:20:19] START IMPORT bronze_cargos
+[2026-05-14 16:20:19] Testando conexão com MySQL...
+1
+[2026-05-14 16:20:19] Conexão MySQL estabelecida com sucesso
+[2026-05-14 16:20:19] Carregando CSV cargos...
+[2026-05-14 16:20:19] CSV carregado com sucesso
+[2026-05-14 16:20:19] Dados inseridos com sucesso
+[2026-05-14 16:20:19] PROCESSO EXECUTADO COM SUCESSO
+[2026-05-14 16:20:19] Tempo de importação: 2 segundos
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
