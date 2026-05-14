@@ -24,6 +24,11 @@ cd /mnt/c/Users/lramo/OneDrive/Documentos/Estudos/sql-estudos/project/election |
 source config/.env
 
 # =====================================================
+# LOGS
+# =====================================================
+
+
+# =====================================================
 # VARIÁVEIS DO PROJETO
 # =====================================================
 
@@ -73,6 +78,8 @@ LOG_FILE="$LOG_PATH/import_cargos.log"
 # INÍCIO DO PROCESSO
 # =====================================================
 
+
+
 # >>
 # adiciona texto ao final do arquivo
 # sem apagar logs antigos
@@ -81,6 +88,10 @@ LOG_FILE="$LOG_PATH/import_cargos.log"
 # [2026-05-13 14:00:00] START IMPORT bronze_cargos
 
 echo "[$DATE] START IMPORT bronze_cargos" >> "$LOG_FILE"
+
+# data/hora inicial
+# será utilizada dentro dos logs
+START_TIME=$(date +%s)
 
 # =====================================================
 # EXECUTA IMPORTAÇÃO MYSQL
@@ -165,6 +176,12 @@ if [ $? -eq 0 ]; then
 
         echo "[$DATE] PROCESSO EXECUTADO COM SUCESSO" >> "$LOG_FILE"
 
+        END_TIME=$(date +%s)
+
+        EXECUTION_TIME=$((END_TIME - START_TIME))
+
+        echo "[$DATE] Tempo de importação: $EXECUTION_TIME segundos" >> "$LOG_FILE"
+
         echo "=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=" >> "$LOG_FILE"
 
     else
@@ -209,6 +226,8 @@ LOG_FILE="$LOG_PATH/import_votos.log"
 
 echo "[$DATE] START IMPORT bronze_votos" >> "$LOG_FILE"
 
+START_TIME=$(date +%s)
+
 echo "[$DATE] Testando conexão com MySQL..." >> "$LOG_FILE"
 
 mysql -sN \
@@ -236,6 +255,14 @@ if [ $? -eq 0 ]; then
         "$ARCHIVE_PATH/h_votos/h_votos_$(date '+%Y%m%d_%H%M%S').csv"
 
         echo "[$DATE] PROCESSO EXECUTADO COM SUCESSO" >> "$LOG_FILE"
+
+        # data/hora final
+
+        END_TIME=$(date +%s)
+
+        EXECUTION_TIME=$((END_TIME - START_TIME))
+
+        echo "[$DATE] Tempo de importação: $EXECUTION_TIME segundos" >> "$LOG_FILE"
 
 
 
@@ -281,6 +308,8 @@ LOG_FILE="$LOG_PATH/import_candidatos.log"
 
 echo "[$DATE] START IMPORT bronze_candidatos" >> "$LOG_FILE"
 
+START_TIME=$(date +%s)
+
 
 echo "[$DATE] Testando conexão com MySQL..." >> "$LOG_FILE"
 
@@ -309,6 +338,12 @@ if [ $? -eq 0 ]; then
 
         mv "$PROJECT_PATH/data/raw/candidatos/raw_candidatos.csv" \
         "$ARCHIVE_PATH/h_candidatos/h_candidatos_$(date '+%Y%m%d_%H%M%S').csv"
+
+        END_TIME=$(date +%s)
+
+        EXECUTION_TIME=$((END_TIME - START_TIME))
+
+        echo "[$DATE] Tempo de importação: $EXECUTION_TIME segundos" >> "$LOG_FILE"
 
         echo "=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=" >> "$LOG_FILE"
 
