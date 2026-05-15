@@ -208,3 +208,13 @@ Tempo total: 0 segundos
 [2026-05-14 16:20:19] PROCESSO EXECUTADO COM SUCESSO
 [2026-05-14 16:20:19] Tempo de importação: 0 segundos
 =-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+[2026-05-15 16:35:18] START IMPORT bronze_candidatos
+[2026-05-15 16:35:18] Testando conexão com MySQL...
+1
+[2026-05-15 16:35:18] Conexão MySQL estabelecida com sucesso
+[2026-05-15 16:35:18] Carregando CSV candidatos...
+[2026-05-15 16:35:18] CSV carregado com sucesso
+[2026-05-15 16:35:18] Dados inseridos com sucesso
+[2026-05-15 16:35:18] PROCESSO EXECUTADO COM SUCESSO
+[2026-05-15 16:35:18] Tempo de importação: 1 segundos
+=-=-=-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
