@@ -10,7 +10,8 @@ CREATE TABLE IF NOT EXISTS prata_votos(
     eleitor VARCHAR(100),
     sexo VARCHAR(50),
     cidade VARCHAR(100),
-    data_voto VARCHAR(30),
+    data_voto VARCHAR(10),
+    hora_voto VARCHAR(10),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
