@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS bronze_votos(
     data_voto VARCHAR(30)
 );
 
-drop table if exists bronze_candidatos;
+
 CREATE TABLE IF NOT EXISTS bronze_candidatos(
     candidato_id INT,
     nome VARCHAR(100),
