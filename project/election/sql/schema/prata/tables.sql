@@ -22,9 +22,10 @@ CREATE TABLE IF NOT EXISTS prata_candidatos(
     nome VARCHAR(50),
     status_elegibilidade VARCHAR(20),
     partido VARCHAR(10),
-    cargo VARCHAR(30),
+    cargo_id INT,
     cidade VARCHAR(50),
     idade INT,
+    motivo_elegibilidade VARCHAR(100),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
