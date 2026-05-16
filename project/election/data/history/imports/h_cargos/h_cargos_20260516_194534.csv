@@ -1,0 +1,111 @@
+cargo_id,nome_cargo,esfera,vagas,ano_eleicao
+11,Deputado Federal,Municipal,1,2022
+5,Vereador,Federal,2,-2026
+10,Deputado Federal,Estadual,7,2026
+8,Deputado Estadual,Municipal,5,2022
+1,Vereador,Municipal,6,3000
+11,Vereador,Federal,8,2022
+8,vereador   ,Municipal,1,2022
+17,Vereador   ,Municipal,1,2026
+7,Vice-Prefeito,Estadual,1,2024
+5,Prefeito,Estadual,2,2024
+4,Deputado Federal,Municipal,1,2026
+11,Senador,Municipal,5,2024
+3,Deputado Estadual,Federal,7,2024
+6,PREFEITO,Federal,10,2026
+6,,Estadual,3,2022
+14,Vice-Prefeito,Federal,2,2024
+1,Vice-Prefeito   ,Federal,4,2024
+10,Vereador,Federal,1,2026
+20,Deputado Federal,Estadual,10,2026
+8,governador,Federal,1,2022
+7,Vice-Prefeito,Estadual,7,2026
+10,Deputado Estadual,Municipal,8,2026
+20,,Estadual,2,2024
+20,Senador,Estadual,2,2024
+8,Vereador,Federal,10,2022
+3,Vereador,Federal,7,2022
+8,Deputado Federal,Federal,3,2026
+11,deputado estadual,Municipal,2,2024
+12,Senador   ,Estadual,1,2022
+18,,Municipal,4,1900
+4,Vice-Prefeito,Estadual,8,2026
+18,Deputado Estadual,Estadual,7,2022
+19,Vice-Prefeito,Federal,2,2026
+9,Vereador,Estadual,8,2022
+3,PREFEITO,Federal,6,2022
+15,Vereador,Federal,4,2024
+10,Governador,Estadual,5,2026
+4,Prefeito,Federal,7,2026
+10,Governador,Estadual,3,2024
+1,Vice-Prefeito,Municipal,6,2024
+15,Governador,Estadual,5,2024
+10,Prefeito,Municipal,2,2024
+12,Prefeito,Federal,2,2024
+19,Vice-Prefeito   ,Estadual,4,2022
+13,deputado estadual,Municipal,9,-2026
+9,prefeito,Municipal,5,2024
+19,Governador,Municipal,7,2022
+8,Senador,Estadual,7,2024
+3,Senador,Federal,6,2022
+2,Vice-Prefeito,Estadual,6,2024
+8,Vereador,Federal,10,2026
+10,Deputado Federal,Estadual,9,2024
+3,deputado federal,Estadual,4,2024
+12,Vereador,Federal,6,2024
+6,VICE-PREFEITO,Federal,5,2026
+4,Deputado Estadual,Federal,8,2024
+2,,Federal,1,2026
+7,Governador,Federal,8,3000
+12,,Federal,6,2026
+13,Vereador,Municipal,9,2024
+14,Prefeito,Estadual,10,2022
+20,Deputado Estadual,Municipal,3,2022
+11,vice-prefeito,Estadual,1,2026
+12,Senador,Estadual,8,2024
+8,Deputado Federal,Municipal,7,2024
+20,Deputado Estadual,Federal,9,2022
+12,Deputado Estadual,Estadual,8,2022
+10,Deputado Federal,Municipal,6,2026
+14,Deputado Estadual,Estadual,5,2022
+19,Deputado Estadual,Municipal,1,2024
+16,Deputado Federal,Federal,4,2022
+19,Vice-Prefeito,Federal,4,2026
+15,Prefeito,Municipal,2,2024
+10,deputado federal,Estadual,4,2022
+18,Prefeito,Federal,10,2024
+10,Vereador,Estadual,2,2022
+1,Deputado Estadual,Estadual,5,2026
+20,Deputado Federal,Federal,3,2026
+4,Vice-Prefeito,Federal,1,2026
+1,Governador,Federal,7,2022
+2,Prefeito,Federal,10,2026
+13,Governador,Municipal,3,2026
+18,Senador,Municipal,3,2026
+18,Deputado Estadual,Municipal,1,2022
+8,Vereador,Federal,9,2024
+1,prefeito,Municipal,10,2026
+18,Deputado Estadual,Federal,5,2026
+13,Governador   ,Estadual,9,2024
+14,Deputado Federal,Municipal,5,2024
+1,Vereador,Federal,9,2026
+9,Governador,Estadual,0,2026
+7,Senador,Estadual,10,2024
+15,Vice-Prefeito,Municipal,6,2026
+20,PREFEITO   ,Federal,9,2022
+1,Prefeito,Federal,1,2026
+7,Prefeito   ,Estadual,10,2024
+3,Senador,Municipal,4,2024
+18,,Federal,6,2024
+13,Vice-Prefeito,Municipal,3,2024
+9,SENADOR,Federal,8,2024
+11,Deputado Federal,Municipal,1,2022
+5,Vereador,Federal,2,-2026
+10,Deputado Federal,Estadual,7,2026
+8,Deputado Estadual,Municipal,5,2022
+1,Vereador,Municipal,6,3000
+11,Vereador,Federal,8,2022
+8,vereador   ,Municipal,1,2022
+17,Vereador   ,Municipal,1,2026
+7,Vice-Prefeito,Estadual,1,2024
+5,Prefeito,Estadual,2,2024
