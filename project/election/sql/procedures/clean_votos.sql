@@ -185,8 +185,3 @@ BEGIN
 END $$
 
 DELIMITER ;
-
-CALL sp_carga_prata_votos();
-
-SELECT * FROM prata_votos;
-TRUNCATE TABLE prata_votos;
