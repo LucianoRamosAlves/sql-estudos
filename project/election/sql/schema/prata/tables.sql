@@ -30,10 +30,11 @@ CREATE TABLE IF NOT EXISTS prata_candidatos(
 
 
 CREATE TABLE IF NOT EXISTS prata_cargos(
-    cargo_id INT,
-    nome_cargo VARCHAR(100),
-    esfera VARCHAR(100),
+    cargo_id INT PRIMARY KEY AUTO_INCREMENT,
+    nome_cargo VARCHAR(30),
+    esfera VARCHAR(20),
     vagas INT,
+    status_vagas VARCHAR(20),
     ano_eleicao VARCHAR(30),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
