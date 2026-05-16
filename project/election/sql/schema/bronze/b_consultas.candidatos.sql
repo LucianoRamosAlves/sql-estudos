@@ -98,26 +98,3 @@ SELECT * from prata_candidatos
 select * from prata_cargos
 select * from prata_votos
 
-select 
-candidato_id,
-nome,
-partido,
-cargo
-from prata_candidatos c
-left join prata_cargos g
-on c.cargo = g.nome_cargo
-
-
-SELECT
-
-    c.candidato_id,
-
-    c.nome,
-
-    cg.cargo_id
-
-FROM prata_candidatos c
-
-LEFT JOIN prata_cargos cg
-    ON UPPER(TRIM(c.cargo))
-     = UPPER(TRIM(cg.nome_cargo));
