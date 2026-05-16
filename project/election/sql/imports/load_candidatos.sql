@@ -43,7 +43,7 @@ INTO TABLE bronze_candidatos
 candidato_id,
 nome,
 partido,
-cargo,
+cargo_id,
 cidade,
 idade
 )  

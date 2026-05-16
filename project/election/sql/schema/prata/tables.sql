@@ -19,10 +19,11 @@ CREATE TABLE IF NOT EXISTS prata_votos(
 
 CREATE TABLE IF NOT EXISTS prata_candidatos(
     candidato_id INT,
-    nome VARCHAR(100),
-    partido VARCHAR(100),
-    cargo VARCHAR(100),
-    cidade VARCHAR(100),
+    nome VARCHAR(50),
+    status_elegibilidade VARCHAR(20),
+    partido VARCHAR(10),
+    cargo VARCHAR(30),
+    cidade VARCHAR(50),
     idade INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

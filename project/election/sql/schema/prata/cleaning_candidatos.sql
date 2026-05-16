@@ -3,7 +3,7 @@ INSERT INTO prata_candidatos(
     nome,
     status_elegibilidade,
     partido,
-    cargo,
+    cargo_id,
     cidade,
     idade
 )

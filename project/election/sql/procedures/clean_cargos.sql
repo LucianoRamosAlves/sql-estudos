@@ -1,18 +1,18 @@
 DELIMITER $$
 
-CREATE PROCEDURE sp_carga_prata_candidatos()
+CREATE PROCEDURE sp_carga_prata_cargos()
 BEGIN
 
     -- =========================
     -- VARIÁVEIS
     -- =========================
-
+    
     DECLARE v_inicio DATETIME;
     DECLARE v_fim DATETIME;
     DECLARE v_tempo_execucao INT;
 
     -- =========================
-    -- TRATAMENTO DE ERRO
+    -- CAPTURA DE ERRO
     -- =========================
 
     DECLARE EXIT HANDLER FOR SQLEXCEPTION
@@ -28,9 +28,8 @@ BEGIN
             v_fim
         );
 
-        SELECT
-
-            'ERRO' AS status_execucao,
+        SELECT 
+            'ERRO AO EXECUTAR PROCEDURE' AS status_execucao,
             v_inicio AS inicio_execucao,
             v_fim AS fim_execucao,
             CONCAT(v_tempo_execucao, ' segundos') AS tempo_execucao;
@@ -38,7 +37,7 @@ BEGIN
     END;
 
     -- =========================
-    -- INÍCIO
+    -- INÍCIO EXECUÇÃO
     -- =========================
 
     SET v_inicio = NOW();
@@ -46,90 +45,67 @@ BEGIN
     START TRANSACTION;
 
     -- =========================
-    -- LIMPA TABELA
+    -- INSERT SILVER
     -- =========================
 
-    TRUNCATE TABLE prata_candidatos;
+    INSERT INTO prata_cargos(
 
-    -- =========================
-    -- INSERT
-    -- =========================
-
-    INSERT INTO prata_candidatos(
-
-        candidato_id,
-        nome,
-        status_elegibilidade,
-        partido,
-        cargo,
-        cidade,
-        idade
+        nome_cargo,
+        esfera,
+        vagas,
+        status_vagas,
+        ano_eleicao
 
     )
 
     SELECT 
 
-        candidato_id,
+        UPPER(TRIM(nome_cargo)) AS nome_cargo,
+
+        UPPER(TRIM(esfera)) AS esfera,
 
         CASE 
-
-            WHEN nome IS NULL
-                 OR UPPER(TRIM(nome)) = ''
-
-            THEN 'DESCONHECIDO'
-
-            ELSE UPPER(TRIM(nome))
-
-        END AS nome,
+            WHEN vagas IS NULL THEN 0 
+            ELSE vagas 
+        END AS vagas,
 
         CASE 
+            WHEN vagas = 0 
+                 OR vagas IS NULL
+            THEN 'INDISPONIVEL'
 
-            WHEN nome IS NULL
-                 OR UPPER(TRIM(nome)) = ''
-                 OR idade > 60
-
-            THEN 'INELEGIVEL'
-
-            ELSE 'ELEGIVEL'
-
-        END AS status_elegibilidade,
-
-        UPPER(TRIM(partido)) AS partido,
-
-        UPPER(TRIM(cargo)) AS cargo,
+            ELSE 'DISPONIVEL'
+        END AS status_vagas,
 
         CASE 
+            WHEN ano_eleicao <> 2026 THEN 2026
+            ELSE ano_eleicao
+        END AS ano_eleicao
 
-            WHEN cidade IS NULL
-                 OR UPPER(TRIM(cidade)) = ''
-
-            THEN 'N/A'
-
-            ELSE UPPER(TRIM(cidade))
-
-        END AS cidade,
-
-        idade
-
-    FROM(
+    FROM (
 
         SELECT *,
 
                ROW_NUMBER() OVER(
 
-                   PARTITION BY candidato_id
+                   PARTITION BY
 
-                   ORDER BY candidato_id DESC
+                       UPPER(TRIM(nome_cargo)),
+                       UPPER(TRIM(esfera))
+
+                   ORDER BY vagas ASC
 
                ) AS flag_last
 
-        FROM bronze_candidatos
+        FROM bronze_cargos
+
+        WHERE ano_eleicao <= YEAR(CURDATE())
 
     ) t
 
     WHERE flag_last = 1
-
-    ORDER BY nome DESC;
+      AND nome_cargo <> ''
+      AND esfera <> '';
 
     -- =========================
     -- FINALIZA
@@ -149,7 +125,7 @@ BEGIN
     -- RETORNO
     -- =========================
 
-    SELECT
+    SELECT 
 
         'SUCESSO' AS status_execucao,
         v_inicio AS inicio_execucao,
@@ -160,4 +136,4 @@ END $$
 
 DELIMITER ;
 
-CALL sp_carga_prata_candidatos();
+CALL sp_carga_prata_cargos();

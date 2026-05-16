@@ -1,6 +1,8 @@
+use election;
+
 DELIMITER $$
 
-CREATE PROCEDURE sp_carga_prata_candidatos()
+CREATE PROCEDURE sp_carga_prata_votos()
 BEGIN
 
     -- =========================
@@ -49,67 +51,78 @@ BEGIN
     -- LIMPA TABELA
     -- =========================
 
-    TRUNCATE TABLE prata_candidatos;
+    TRUNCATE TABLE prata_votos;
 
     -- =========================
     -- INSERT
     -- =========================
 
-    INSERT INTO prata_candidatos(
+    INSERT INTO prata_votos(
 
+        titulo_eleitor,
         candidato_id,
-        nome,
-        status_elegibilidade,
-        partido,
-        cargo,
+        status_votos,
+        eleitor,
+        sexo,
         cidade,
-        idade
+        data_voto,
+        hora_voto
 
     )
 
     SELECT 
 
+        titulo_eleitor,
+
         candidato_id,
 
-        CASE 
+        CASE
 
-            WHEN nome IS NULL
-                 OR UPPER(TRIM(nome)) = ''
+            WHEN candidato_id IN (
 
-            THEN 'DESCONHECIDO'
+                SELECT candidato_id
+                FROM bronze_candidatos
 
-            ELSE UPPER(TRIM(nome))
+            )
 
-        END AS nome,
+            THEN 'VALIDO'
 
-        CASE 
+            ELSE 'NULO'
 
-            WHEN nome IS NULL
-                 OR UPPER(TRIM(nome)) = ''
-                 OR idade > 60
+        END AS status_votos,
 
-            THEN 'INELEGIVEL'
+        UPPER(TRIM(eleitor)) AS eleitor,
 
-            ELSE 'ELEGIVEL'
+        CASE
 
-        END AS status_elegibilidade,
+            WHEN UPPER(TRIM(sexo)) IN (
+                'M',
+                'MASC',
+                'MASCULINO'
+            )
 
-        UPPER(TRIM(partido)) AS partido,
+            THEN 'MASCULINO'
 
-        UPPER(TRIM(cargo)) AS cargo,
+            WHEN UPPER(TRIM(sexo)) IN (
+                'F',
+                'FEM',
+                'FEMININO'
+            )
 
-        CASE 
+            THEN 'FEMININO'
 
-            WHEN cidade IS NULL
-                 OR UPPER(TRIM(cidade)) = ''
+            ELSE 'N/A'
 
-            THEN 'N/A'
+        END AS sexo,
 
-            ELSE UPPER(TRIM(cidade))
+        UPPER(TRIM(cidade)) AS cidade,
 
-        END AS cidade,
+        DATE(data_voto) AS data_voto,
 
-        idade
+        TIME_FORMAT(
+            data_voto,
+            '%H:%i:%s'
+        ) AS hora_voto
 
     FROM(
 
@@ -117,19 +130,20 @@ BEGIN
 
                ROW_NUMBER() OVER(
 
-                   PARTITION BY candidato_id
+                   PARTITION BY titulo_eleitor
 
-                   ORDER BY candidato_id DESC
+                   ORDER BY data_voto DESC
 
                ) AS flag_last
 
-        FROM bronze_candidatos
+        FROM bronze_votos
 
     ) t
 
     WHERE flag_last = 1
 
-    ORDER BY nome DESC;
+      AND titulo_eleitor IS NOT NULL
+      AND titulo_eleitor <> '';
 
     -- =========================
     -- FINALIZA
@@ -154,10 +168,25 @@ BEGIN
         'SUCESSO' AS status_execucao,
         v_inicio AS inicio_execucao,
         v_fim AS fim_execucao,
-        CONCAT(v_tempo_execucao, ' segundos') AS tempo_execucao;
+        CONCAT(v_tempo_execucao, ' segundos') AS tempo_execucao,
+
+        (
+            SELECT COUNT(*)
+            FROM prata_votos
+            WHERE status_votos = 'NULO'
+        ) AS total_votos_nulos,
+
+        (
+            SELECT COUNT(*)
+            FROM prata_votos
+            WHERE status_votos = 'VALIDO'
+        ) AS total_votos_validos;
 
 END $$
 
 DELIMITER ;
 
-CALL sp_carga_prata_candidatos();
+CALL sp_carga_prata_votos();
+
+SELECT * FROM prata_votos;
+TRUNCATE TABLE prata_votos;
