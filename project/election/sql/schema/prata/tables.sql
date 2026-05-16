@@ -4,8 +4,9 @@ USE election;
 -- -----------------------------
 
 CREATE TABLE IF NOT EXISTS prata_votos(
-    titulo_eleitor INT,
+    titulo_eleitor VARCHAR(20),
     candidato_id INT,
+    status_votos VARCHAR(20),
     eleitor VARCHAR(100),
     sexo VARCHAR(50),
     cidade VARCHAR(100),
