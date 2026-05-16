@@ -38,3 +38,7 @@ AND (titulo_eleitor != ''));
 
 SELECT * FROM prata_votos
 
+select count(*) AS total_nulos
+from prata_votos
+where status_votos = 'NULO';
+
