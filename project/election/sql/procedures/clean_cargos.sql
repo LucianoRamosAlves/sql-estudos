@@ -135,5 +135,3 @@ BEGIN
 END $$
 
 DELIMITER ;
-
-CALL sp_carga_prata_cargos();
