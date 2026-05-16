@@ -8,7 +8,8 @@ status_votos,
 eleitor, 
 sexo, 
 cidade, 
-data_voto
+data_voto,
+hora_voto
 )
 
 SELECT 
@@ -27,7 +28,8 @@ WHEN UPPER(TRIM(sexo)) IN ('F', 'FEM', 'feminino') THEN 'FEMININO'
 ELSE 'N/A'
 END AS sexo,
 cidade,
-data_voto
+DATE(data_voto) AS data_voto,
+TIME_FORMAT(data_voto, '%H:%i:%s') AS hora_voto
 FROM(
     select *,
     ROW_NUMBER() OVER(PARTITION BY titulo_eleitor ORDER BY data_voto DESC) AS flag_last
