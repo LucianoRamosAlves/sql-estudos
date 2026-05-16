@@ -78,7 +78,43 @@ SELECT *
 FROM bronze_votos
 WHERE candidato_id NOT IN (SELECT candidato_id FROM bronze_candidatos);
 
+SELECT
 
+    DATE(data_voto) AS data,
+
+    TIME_FORMAT(data_voto, '%H:%i:%s') AS hora
+
+FROM bronze_votos;
+
+
+SELECT *
+FROM bronze_votos
+WHERE data_voto LIKE '%/%';
+
+SELECT *
+FROM bronze_votos
+WHERE data_voto LIKE '%_%';
+
+-- teste conversao
+SELECT
+    data_voto,
+
+    STR_TO_DATE(
+        data_voto,
+        '%Y-%m-%d %H:%i:%s.%f'
+    ) AS data_convertida
+
+FROM bronze_votos;
+
+
+-- Você pode descobrir só as quebradas:
+
+SELECT *
+FROM bronze_votos
+WHERE STR_TO_DATE(
+    data_voto,
+    '%Y-%m-%d %H:%i:%s.%f'
+) IS NULL;
 
 
 
