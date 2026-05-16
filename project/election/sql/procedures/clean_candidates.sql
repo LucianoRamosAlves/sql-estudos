@@ -54,82 +54,43 @@ BEGIN
     -- =========================
     -- INSERT
     -- =========================
-
     INSERT INTO prata_candidatos(
-
         candidato_id,
         nome,
         status_elegibilidade,
         partido,
-        cargo,
+        cargo_id,
         cidade,
-        idade
-
+        idade,
+        motivo_elegibilidade
     )
-
     SELECT 
-
-        candidato_id,
-
-        CASE 
-
-            WHEN nome IS NULL
-                 OR UPPER(TRIM(nome)) = ''
-
-            THEN 'DESCONHECIDO'
-
-            ELSE UPPER(TRIM(nome))
-
-        END AS nome,
-
-        CASE 
-
-            WHEN nome IS NULL
-                 OR UPPER(TRIM(nome)) = ''
-                 OR idade > 60
-
-            THEN 'INELEGIVEL'
-
-            ELSE 'ELEGIVEL'
-
-        END AS status_elegibilidade,
-
-        UPPER(TRIM(partido)) AS partido,
-
-        UPPER(TRIM(cargo)) AS cargo,
-
-        CASE 
-
-            WHEN cidade IS NULL
-                 OR UPPER(TRIM(cidade)) = ''
-
-            THEN 'N/A'
-
-            ELSE UPPER(TRIM(cidade))
-
-        END AS cidade,
-
-        idade
-
+    candidato_id,
+    CASE WHEN UPPER(TRIM(nome)) = '' 
+    OR UPPER(TRIM(nome)) IS NULL
+    THEN 'Desconhecido' ELSE UPPER(TRIM(nome)) END AS nome,
+    CASE WHEN UPPER(TRIM(nome)) = ''
+    OR idade > 60  
+    OR cargo_id > 21
+    THEN 'Inelegivel' 
+    ELSE 'Elegivel' END AS status_elegibilidade,
+    UPPER(TRIM(partido)) AS partido,
+    cargo_id,
+    CASE WHEN UPPER(TRIM(cidade)) IS NULL THEN 'N/A' ELSE UPPER(TRIM(cidade)) END AS cidade,
+    idade,
+    CASE
+    WHEN UPPER(TRIM(nome)) = '' OR nome IS NULL THEN 'Nome Invalido'
+    WHEN idade > 60 THEN 'Idade acima de 60 anos'
+    WHEN cargo_id > 21 THEN 'Cargo inexistente'
+    ELSE 'Sem problemas' END
+    AS motivo_elegibilidade
     FROM(
-
-        SELECT *,
-
-               ROW_NUMBER() OVER(
-
-                   PARTITION BY candidato_id
-
-                   ORDER BY candidato_id DESC
-
-               ) AS flag_last
-
+        select *,
+        ROW_NUMBER() OVER(PARTITION BY candidato_id ORDER BY candidato_id DESC) AS flag_last
         FROM bronze_candidatos
-
-    ) t
-
-    WHERE flag_last = 1
-
-    ORDER BY nome DESC;
+    )
+    t WHERE flag_last = 1
+    ORDER BY nome ASC;
 
     -- =========================
     -- FINALIZA
@@ -159,5 +120,3 @@ BEGIN
 END $$
 
 DELIMITER ;
-
-CALL sp_carga_prata_candidatos();
