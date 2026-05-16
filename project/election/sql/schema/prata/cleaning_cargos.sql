@@ -1,5 +1,5 @@
 
-SELECT * FROM bronze_cargos;
+SELECT * FROM prata_cargos;
 
 INSERT INTO prata_cargos(
     nome_cargo,
@@ -13,7 +13,7 @@ INSERT INTO prata_cargos(
 SELECT 
     UPPER(TRIM(nome_cargo)) AS nome_cargo,
     UPPER(TRIM(esfera)) AS esfera,
-    CASE WHEN vagas = 0 THEN NULL ELSE vagas END AS vagas,
+    CASE WHEN vagas = NULL THEN 0 ELSE vagas END AS vagas,
     CASE WHEN vagas = 0 THEN 'INDISPONIVEL'
     ELSE 'DISPONIVEL'
     END AS status_vagas,
